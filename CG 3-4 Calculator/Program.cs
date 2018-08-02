@@ -7,7 +7,7 @@ namespace CG_3_4_Calculator
         static void Main(string[] args)
         {
             Console.WriteLine("Sandra's calculator");
-            
+
             Console.Write("Please type the operation you would like to perform. (+, -, *, or /)   ");
             string operation = Console.ReadLine();
 
@@ -16,29 +16,37 @@ namespace CG_3_4_Calculator
 
             Console.Write("Now type the second number.  ");
             string y = Console.ReadLine();
-            decimal c = 0;
 
-            
             decimal a = Convert.ToDecimal(x);
             decimal b = Convert.ToDecimal(y);
-            
-            
+
+            string message = "";
+
             if (operation == "+")
-                c = a + b;
+                {
+                    decimal addResult = a + b;
+                    message = ($"Your answer is {addResult} ");
+                }
             else if (operation == "-")
-                c = a - b;
+                {
+                    decimal subResult = a - b;
+                    message = ($"Your answer is {subResult}");
+                }
             else if (operation == "*")
-                c = a * b;
+                {
+                    decimal multResult = a * b;
+                    message = ($"Your answer is {multResult}");
+                }
             else if (operation == "/")
-                c = a / b;
+                {
+                    decimal divResult = a / b;
+                    message = ($"Your answer is {divResult}"); }
             else
                 Console.WriteLine("I don't understand.  Please try again.");
 
-            Console.WriteLine($"Your answer is {c}" );
+            Console.WriteLine(message);
             Console.ReadLine();
-           
-               
-
+            
 
             
         }
